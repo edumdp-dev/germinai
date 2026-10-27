@@ -1,0 +1,17 @@
+{
+  "name": "@germinai/design-system",
+  "version": "1.0.0",
+  "description": "GerminAI's accessible monochrome React components and design skill",
+  "type": "module",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/edumdp-dev/germinai-design-system.git" },
+  "files": ["dist", "skills", "README.md", "LICENSE"],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" }, "./styles.css": "./dist/styles.css" },
+  "sideEffects": ["**/*.css"],
+  "scripts": { "build": "vite build && tsc -p tsconfig.build.json", "prepare": "npm run build", "dev": "vite --config vite.gallery.config.ts", "build:gallery": "vite build --config vite.gallery.config.ts", "preview": "vite preview --config vite.gallery.config.ts" },
+  "peerDependencies": { "react": ">=18.2.0", "react-dom": ">=18.2.0" },
+  "dependencies": { "@radix-ui/react-dialog": "^1.1.15", "@radix-ui/react-slot": "^1.2.3" },
+  "devDependencies": { "@fontsource-variable/geist": "^5.2.8", "@fontsource-variable/space-grotesk": "^5.2.10", "@fontsource/jetbrains-mono": "^5.2.8", "@types/react": "^19.0.0", "@types/react-dom": "^19.0.0", "@vitejs/plugin-react": "^4.4.1", "react": "^19.0.0", "react-dom": "^19.0.0", "typescript": "^5.8.3", "vite": "^6.3.5" }
+}
