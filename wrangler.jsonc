@@ -1,0 +1,26 @@
+// Frontend: npm run dev + npm run dev:api (proxy /api). Execute npm run build antes de iniciar o Worker.
+// Publicação: npm run deploy. O Worker aplica permissões no servidor; usuários só publicam no blog.
+// Login sem senha: código por e-mail, não 2FA. Segredos AUTH_SECRET e RESEND_API_KEY via wrangler secret.
+// EMAIL_FROM deve pertencer a um domínio verificado no Resend; nunca use um remetente institucional sem autorização.
+// SUPERADMIN_EMAIL reserva a conta da hospedagem; outros cadastros nunca recebem privilégios automaticamente.
+// Banco local: npx wrangler d1 migrations apply germinai-community --local. Produção: troque --local por --remote.
+// PT/EN: rotas do site, conta, administração e blog/:slug em src/lib/i18n.ts. Conteúdo inicial em src/data/posts.ts.
+// Segurança: códigos de 6 dígitos expiram em 10 min (5 tentativas); sessões HttpOnly/Secure duram 7 dias.
+// Membros: domínio exato institutojef.org.br. Admin/superadmin revisam; só superadmins alteram permissões.
+// Configure germinai.duds.dev em https://resend.com/domains e a chave em https://resend.com/api-keys.
+// Produção: npx wrangler secret put RESEND_API_KEY. AUTH_SECRET já foi gerado e salvo como segredo.
+// Local: .dev.vars (ignorado pelo Git); nunca exponha credenciais no frontend ou em VITE_*.
+// Resend Free: 100 e-mails/dia e 3.000/mês (https://resend.com/pricing); não ative cobrança adicional.
+// Regressões: npm test usa Worker/D1 isolados; envio de e-mail real exige as credenciais do provedor.
+// 2026-10: blog moderado e URL escolhida pelo autor; Instituto com logo oficial; menos separadores e sem labels de exemplo.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "germinai",
+  "main": "worker/index.ts",
+  "account_id": "97116d33fe238edcbd4c79fbc7dae271",
+  "compatibility_date": "2026-10-09",
+  "assets": { "directory": "./dist", "binding": "ASSETS", "not_found_handling": "single-page-application", "run_worker_first": ["/api/*"] },
+  "d1_databases": [{ "binding": "DB", "database_name": "germinai-community", "database_id": "4822411f-281d-4d12-abe3-2469736036fa", "migrations_dir": "migrations" }],
+  "vars": { "SUPERADMIN_EMAIL": "edumoraes.depaula@gmail.com", "EMAIL_FROM": "GerminAI <acesso@germinai.duds.dev>" },
+  "routes": [{ "pattern": "germinai.duds.dev", "custom_domain": true }]
+}

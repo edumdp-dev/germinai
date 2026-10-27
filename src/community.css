@@ -1,0 +1,124 @@
+.editorial-eyebrow { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; color: #a0a0a0; font: 10px/1.8 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.editorial-meta { color: #a0a0a0; font: 10px/1.8 var(--font-mono); overflow-wrap: anywhere; }
+.blog-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+.blog-toolbar .editorial-eyebrow { margin: 0; }
+.blog-invitation { display: flex; justify-content: space-between; align-items: center; gap: 40px; margin-top: 60px; padding: 36px; background: #0d0d0d; border-radius: 14px; }
+.blog-invitation h2 { max-width: 600px; font-size: 28px; line-height: 1.25; letter-spacing: -.04em; }
+.blog-invitation p { max-width: 620px; margin-top: 16px; font-size: 14px; line-height: 1.8; color: #a0a0a0; }
+.blog-invitation .text-link { flex-shrink: 0; }
+.admin-shortcut { display: grid; place-items: center; width: 40px; height: 40px; color: #a0a0a0; border-radius: 7px; }
+.admin-shortcut:hover { background: #1b1b1b; color: #f5f5f5; }
+.account-shell { padding-block: 76px 100px; }
+.account-shell h1 { font: 500 clamp(36px, 4.8vw, 58px)/1.1 var(--font-display); letter-spacing: -.055em; overflow-wrap: anywhere; }
+.auth-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: clamp(48px, 7vw, 100px); align-items: start; }
+.auth-intro { padding-top: 24px; }
+.auth-intro h1 { max-width: 560px; font-size: clamp(42px, 5.2vw, 68px); text-wrap: balance; }
+.auth-intro > p:not(.editorial-eyebrow) { max-width: 470px; margin-top: 28px; color: #a0a0a0; font-size: 16px; line-height: 1.85; }
+.auth-note { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 16px; max-width: 440px; margin-top: 50px; color: #a0a0a0; font-size: 13px; line-height: 1.85; }
+.auth-note svg { margin-top: 4px; }
+.auth-card { background: #0d0d0d; border-radius: 16px; padding: 36px; }
+.auth-card-icon { width: 30px; height: 30px; margin-bottom: 24px; color: #a0a0a0; }
+.auth-card h2 { font-size: 27px; line-height: 1.25; letter-spacing: -.04em; }
+.form-description { margin-block: 20px; font-size: 13px; line-height: 1.9; color: #a0a0a0; overflow-wrap: anywhere; }
+.form-description strong { color: #f5f5f5; font-weight: 500; }
+.editor-form { display: flex; flex-direction: column; gap: 10px; }
+.editor-form label, .review-controls label { display: block; font-size: 12px; line-height: 1.8; color: #d6d6d6; margin-top: 10px; }
+.editor-form input, .editor-form textarea, .editor-form select, .review-controls textarea, .role-controls select { display: block; width: 100%; border: 1px solid #333; border-radius: 7px; padding: 12px 14px; color: #f5f5f5; background: #050505; font-size: 14px; line-height: 1.6; min-width: 0; }
+.editor-form input, .editor-form select, .role-controls select { min-height: 46px; }
+.editor-form textarea, .review-controls textarea { resize: vertical; }
+.editor-form :is(input, textarea, select):focus-visible, .review-controls textarea:focus-visible, .role-controls select:focus-visible { outline: 2px solid #f5f5f5; outline-offset: 3px; }
+.form-submit { margin-top: 16px; height: 46px; width: 100%; }
+.auth-footnote { margin-top: 24px; color: #929292; font-size: 11px; line-height: 1.9; }
+.auth-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.editor-form .code-input { font: 22px/1.6 var(--font-mono); letter-spacing: .3em; }
+.form-message { padding: 16px 18px; margin-block: 16px; background: #1b1b1b; border-radius: 8px; color: #f5f5f5; font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+.form-error { border-left: 3px solid #a0a0a0; }
+.loading-copy { font-size: 14px; color: #a0a0a0; padding-block: 24px; }
+.workspace-header { display: flex; justify-content: space-between; align-items: start; gap: 32px; margin-bottom: 48px; }
+.workspace-header > div > p:not(.editorial-eyebrow) { margin-top: 18px; color: #a0a0a0; font-size: 14px; line-height: 1.8; overflow-wrap: anywhere; }
+.action-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.workspace-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-block: 24px 32px; }
+.workspace-toolbar h2, .workspace-section-heading h2 { font-size: 29px; line-height: 1.25; letter-spacing: -.04em; }
+.workspace-toolbar p { margin-top: 10px; font-size: 14px; color: #a0a0a0; line-height: 1.8; }
+.workspace-tabs { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-block: 28px; }
+.editor-panel { padding: 36px; margin-block: 36px; background: #0d0d0d; border-radius: 14px; }
+.workspace-section-heading { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
+.form-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.form-columns label { margin-bottom: 10px; }
+.slug-field { display: flex; align-items: center; background: #050505; border: 1px solid #333; border-radius: 7px; min-width: 0; }
+.slug-field > span { padding-left: 14px; color: #a0a0a0; font: 12px var(--font-mono); white-space: nowrap; }
+.editor-form .slug-field > input { border: 0; background: transparent; }
+.field-help { font-size: 11px; color: #a0a0a0; line-height: 1.8; }
+.section-drafts { display: flex; flex-direction: column; gap: 32px; margin-top: 24px; }
+.section-draft { display: flex; flex-direction: column; gap: 10px; border: 0; padding: 0; min-width: 0; }
+.section-draft legend { font: 11px var(--font-mono); color: #a0a0a0; padding-bottom: 10px; }
+.section-draft button { align-self: start; }
+.editor-submit { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+.editor-submit > span { color: #a0a0a0; font-size: 12px; }
+.submissions-list { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.submission-card { background: #0d0d0d; padding: 30px; border-radius: 14px; min-width: 0; }
+.submission-heading { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
+.status-label { font: 10px/1.6 var(--font-mono); color: #f5f5f5; padding: 6px 10px; border-radius: 5px; background: #1b1b1b; }
+.status-published { background: #252525; }
+.status-rejected { border: 1px dashed #707070; }
+.submission-card h3 { font-size: 25px; line-height: 1.3; letter-spacing: -.04em; overflow-wrap: anywhere; }
+.submission-excerpt { margin-top: 16px; max-width: 800px; color: #a0a0a0; font-size: 14px; line-height: 1.85; overflow-wrap: anywhere; }
+.submission-byline { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 22px; color: #a0a0a0; font: 11px/1.8 var(--font-mono); overflow-wrap: anywhere; }
+.submission-preview { margin-top: 24px; }
+.submission-preview summary { cursor: pointer; color: #d5d5d5; font-size: 13px; min-height: 44px; padding-block: 12px; }
+.submission-preview summary:focus-visible { outline: 2px solid #f5f5f5; outline-offset: 4px; }
+.submission-body { max-width: 800px; margin-block: 20px; }
+.submission-body h4 { font: 500 21px/1.4 var(--font-display); margin-block: 28px 16px; }
+.submission-body p { color: #b5b5b5; font-size: 15px; line-height: 1.9; margin-bottom: 18px; white-space: pre-line; overflow-wrap: anywhere; }
+.submission-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+.review-note { margin-top: 20px; background: #1b1b1b; padding: 16px 18px; border-radius: 8px; font-size: 13px; line-height: 1.8; color: #d6d6d6; }
+.review-controls { padding: 24px; margin-top: 28px; background: #151515; border-radius: 10px; }
+.review-controls label { margin-block: 0 12px; }
+.review-controls .action-row { margin-top: 20px; }
+.empty-state { padding: clamp(28px, 5vw, 52px); background: #0d0d0d; border-radius: 14px; }
+.empty-state :is(h2, h3) { font-size: 28px; line-height: 1.3; letter-spacing: -.04em; }
+.empty-state p { max-width: 720px; margin-block: 20px; color: #a0a0a0; font-size: 14px; line-height: 1.9; }
+.permissions-note { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-bottom: 32px; padding: 28px; background: #0d0d0d; border-radius: 12px; color: #a0a0a0; font-size: 13px; line-height: 1.9; }
+.user-access-list { display: flex; flex-direction: column; gap: 14px; }
+.user-access-row { display: flex; justify-content: space-between; align-items: center; gap: 24px; background: #0d0d0d; border-radius: 12px; padding: 24px 28px; }
+.user-access-row > div { min-width: 0; }
+.user-access-row h3 { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 18px; line-height: 1.5; }
+.user-access-row p { color: #a0a0a0; font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; margin-top: 6px; }
+.self-label { font: 10px var(--font-mono); color: #a0a0a0; }
+.role-controls { display: flex; align-items: center; gap: 12px; }
+.role-controls select { min-width: 135px; }
+@media (max-width: 1023px) {
+  .auth-layout { gap: 44px; grid-template-columns: minmax(0, 1fr) minmax(0, 400px); }
+  .auth-card { padding: 28px; }
+  .blog-invitation { flex-direction: column; align-items: start; gap: 24px; }
+}
+@media (max-width: 767px) {
+  .account-shell { padding-block: 44px 68px; }
+  .auth-layout { grid-template-columns: 1fr; gap: 32px; }
+  .auth-intro { padding-top: 0; }
+  .auth-intro h1 { font-size: 43px; }
+  .auth-intro > p:not(.editorial-eyebrow) { font-size: 14px; margin-top: 22px; }
+  .auth-note { margin-top: 24px; }
+  .auth-card { padding: 26px; }
+  .auth-actions > button { font-size: 12px; }
+  .blog-toolbar { align-items: start; flex-direction: column; gap: 16px; }
+  .blog-invitation { padding: 28px; margin-top: 36px; }
+  .blog-invitation h2 { font-size: 26px; }
+  .workspace-header { flex-direction: column; gap: 24px; margin-bottom: 36px; }
+  .workspace-toolbar { flex-direction: column; align-items: start; gap: 20px; }
+  .workspace-toolbar h2, .workspace-section-heading h2 { font-size: 26px; }
+  .workspace-tabs { align-items: start; flex-wrap: wrap; gap: 12px; }
+  .editor-panel { padding: 24px 20px; }
+  .workspace-section-heading { flex-wrap: wrap; }
+  .form-columns { grid-template-columns: 1fr; gap: 10px; }
+  .slug-field > span { font-size: 10px; padding-left: 10px; }
+  .editor-form .slug-field > input { font-size: 12px; padding-inline: 8px; }
+  .submission-card { padding: 24px; }
+  .submission-byline { flex-direction: column; gap: 8px; }
+  .review-controls { padding: 20px 16px; }
+  .review-controls .action-row > button { width: 100%; white-space: normal; min-height: 44px; }
+  .permissions-note { grid-template-columns: 1fr; gap: 16px; padding: 24px; }
+  .user-access-row { flex-direction: column; align-items: stretch; padding: 24px; gap: 20px; }
+  .role-controls { flex-wrap: wrap; }
+  .role-controls select { flex: 1; }
+}

@@ -1,0 +1,30 @@
+/* Page composition stays local; surfaces, transitions and cards come from the shared package. */
+.public-band { padding-block: clamp(64px, 8vw, 104px); }
+.public-band-first { padding-top: 24px; }
+.project-anchor { min-width: 0; scroll-margin-top: 104px; }
+.project-anchor > article { height: 100%; }
+.origin-preview-surface { padding: 0; overflow: hidden; }
+.origin-preview { display: flex; flex-direction: column; height: 100%; padding: 32px; transition: background .2s; }
+.origin-preview:hover { background: #161616; }
+.home-institution-logo { margin-bottom: 24px; }
+.home-institution-logo img { display: block; width: 142px; max-width: 100%; height: auto; object-fit: contain; }
+.origin-preview h3 { font: 500 26px/1.25 var(--font-display); letter-spacing: -.045em; }
+.origin-preview > p { margin-block: 20px; max-width: 65ch; color: var(--muted-foreground); font-size: 14px; line-height: 1.85; }
+.origin-preview .text-link { margin-top: auto; }
+.community-invitation { display: flex; justify-content: space-between; align-items: center; gap: 40px; padding: clamp(24px, 4vw, 48px); }
+.community-invitation .g-section-heading { margin-bottom: 0; }
+.community-invitation .g-section-heading h2 { max-width: 660px; font-size: clamp(30px, 3.7vw, 46px); }
+ .community-invitation .g-section-heading .g-copy { max-width: 65ch; }
+.post-list > * { min-width: 0; }
+.resource-light .g-resource-logo { background: #eee; border-color: #eee; }
+.g-resource-logo img { filter: grayscale(1); }
+@media (max-width: 767px) {
+  .public-band-first { padding-top: 16px; }
+  .origin-preview { padding: 24px; }
+  .origin-preview h3 { font-size: 25px; }
+  .community-invitation { flex-direction: column; align-items: start; gap: 24px; }
+  .community-invitation a { max-width: 100%; white-space: normal; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .origin-preview { transition: none; }
+}
