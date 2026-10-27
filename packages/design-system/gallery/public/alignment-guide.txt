@@ -1,0 +1,3 @@
+GerminAI alignment guide
+Keep titles and descriptions in one left-aligned stack.
+Use one shared surface.
